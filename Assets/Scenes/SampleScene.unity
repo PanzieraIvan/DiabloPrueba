@@ -1876,7 +1876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06dcf0e74ab1bd5428ed6108edcbd69a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedBrute: 10
+  speedBrute: 7
   rotationSpeedBrute: 15
   m_bruteAnimation: {fileID: 573088043}
 --- !u!136 &573088045
@@ -3693,7 +3693,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 98bfa94214aa43c4d880d807013d180f,
         type: 3}
       propertyPath: m_Name
-      value: Brute@Breathing Idle
+      value: BrutePlayer
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 98bfa94214aa43c4d880d807013d180f,
         type: 3}
@@ -4974,7 +4974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09f046d93b42121498dc06440beeec0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 543450652202762038}
+  target: {fileID: 573088041}
 --- !u!1 &1724291354
 GameObject:
   m_ObjectHideFlags: 3
@@ -6666,7 +6666,7 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 543450652202762038}
+      objectReference: {fileID: 573088041}
     - target: {fileID: 8166317539135730567, guid: 3a606cf0b35921a45950889063afd89c,
         type: 3}
       propertyPath: vectorPlayer
