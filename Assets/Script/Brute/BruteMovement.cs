@@ -7,6 +7,7 @@ public class BruteMovement : MonoBehaviour
     [SerializeField] private float speedBrute = 10f;
     [SerializeField] private float rotationSpeedBrute = 30f;
     public Animator m_bruteAnimation;
+    private bool m_atackPlayer;
 
     public void MovePlayer()
     {
@@ -19,6 +20,12 @@ public class BruteMovement : MonoBehaviour
         if (l_moventDir != Vector3.zero) transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(l_moventDir), rotationSpeedBrute * Time.deltaTime);
 
         m_bruteAnimation.SetFloat("SpeedBrute", l_moventDir.magnitude * speedBrute);
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            m_atackPlayer = !m_atackPlayer;
+            m_bruteAnimation.SetBool("Atack", m_atackPlayer);
+        }
     }
     void Update()
     {

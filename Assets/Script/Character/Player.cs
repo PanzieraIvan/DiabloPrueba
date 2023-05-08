@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float m_playerHealth = 100f;
 
     public Animator m_playerAnimation;
+    
 
     [SerializeField] private Posimas m_posimas;
     [SerializeField] private float m_baseHealing;
@@ -53,6 +54,8 @@ public class Player : MonoBehaviour
         if (l_moventDir != Vector3.zero) transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(l_moventDir), rotationSpeedPlayer * Time.deltaTime);
 
         m_playerAnimation.SetFloat("SpeedPlayer", l_moventDir.magnitude * speedPlayer);
+
+      
     }
 
     private void OnTriggerEnter(Collider other)

@@ -19,6 +19,11 @@ public class IceBall : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if (other.CompareTag("Wall"))
+        {
+            Destroy(gameObject);
+        }
     }
     void Update()
     {

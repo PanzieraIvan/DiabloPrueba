@@ -12,6 +12,10 @@ public class Enemy2 : MonoBehaviour
 
     public Animator enemy2Animation;
 
+    [SerializeField] private Transform m_raycastPoint;
+    [SerializeField] private float m_maxDistance;
+    [SerializeField] private LayerMask m_raycastLayers;
+
     private void move(Vector3 direction)
     {
         transform.position += direction * (speedEnemy2 * Time.deltaTime);
@@ -36,5 +40,29 @@ public class Enemy2 : MonoBehaviour
         {
             Enemy2Chase();
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            DoRayCast();
+        }
+
+        
+    }
+    private void DoRayCast()
+    {
+        bool l_isHitting = Physics.Raycast(m_raycastPoint.position, m_raycastPoint.forward, out RaycastHit l_hit, m_maxDistance, m_raycastLayers);
+
+        if (l_isHitting)
+        {
+            Debug.Log($"Is hittingh {l_hit.collider.name}");
+        }
+
+        
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawLine(m_raycastPoint.position, m_raycastPoint.position + m_raycastPoint.forward * m_maxDistance);
     }
 }
