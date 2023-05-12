@@ -16,6 +16,8 @@ public class Enemy2 : MonoBehaviour
     [SerializeField] private float m_maxDistance;
     [SerializeField] private LayerMask m_raycastLayers;
 
+    [SerializeField] public float damageEnemy2 = 5f;
+
     private void move(Vector3 direction)
     {
         transform.position += direction * (speedEnemy2 * Time.deltaTime);
