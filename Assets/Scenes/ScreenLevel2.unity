@@ -327,90 +327,6 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
---- !u!1001 &840748693
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1252920848003234704, guid: 4388089aad884124ca099a1a90fe7f26,
-        type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 1884919669561336106, guid: 4388089aad884124ca099a1a90fe7f26,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1884919669561336106, guid: 4388089aad884124ca099a1a90fe7f26,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1884919669561336106, guid: 4388089aad884124ca099a1a90fe7f26,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1884919669561336106, guid: 4388089aad884124ca099a1a90fe7f26,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1884919669561336106, guid: 4388089aad884124ca099a1a90fe7f26,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 34.89
-      objectReference: {fileID: 0}
-    - target: {fileID: 1884919669561336106, guid: 4388089aad884124ca099a1a90fe7f26,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 504.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 1884919669561336106, guid: 4388089aad884124ca099a1a90fe7f26,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 69.47
-      objectReference: {fileID: 0}
-    - target: {fileID: 1884919669561336106, guid: 4388089aad884124ca099a1a90fe7f26,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1884919669561336106, guid: 4388089aad884124ca099a1a90fe7f26,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1884919669561336106, guid: 4388089aad884124ca099a1a90fe7f26,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1884919669561336106, guid: 4388089aad884124ca099a1a90fe7f26,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1884919669561336106, guid: 4388089aad884124ca099a1a90fe7f26,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1884919669561336106, guid: 4388089aad884124ca099a1a90fe7f26,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1884919669561336106, guid: 4388089aad884124ca099a1a90fe7f26,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4388089aad884124ca099a1a90fe7f26, type: 3}
 --- !u!1 &1014060203
 GameObject:
   m_ObjectHideFlags: 3
@@ -659,12 +575,6 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!4 &1278283539 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1884919669561336106, guid: 4388089aad884124ca099a1a90fe7f26,
-    type: 3}
-  m_PrefabInstance: {fileID: 840748693}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1576469302 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1cc3ff71483d259408500512f7f3e4b7,
@@ -720,7 +630,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 1278283539}
+  m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 5
