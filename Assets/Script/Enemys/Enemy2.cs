@@ -8,7 +8,7 @@ public class Enemy2 : MonoBehaviour
     [SerializeField] float rotationSpeedEnemy2 = 20f;
     [SerializeField] float speedEnemy2 = 3f;
     [SerializeField] float distanceEnemyPlayer = 18f;
-    [SerializeField] float distanceEnemy2 = 1f;
+    [SerializeField] float distanceEnemy2 = 0f;
 
     public Animator enemy2Animation;
 
@@ -29,6 +29,7 @@ public class Enemy2 : MonoBehaviour
         {
             transform.LookAt(vectorPlayer);
             move(diferenceVector.normalized);
+            
         }
     }
     // Update is called once per frame
@@ -39,7 +40,13 @@ public class Enemy2 : MonoBehaviour
         if (distanceEnemyPlayer > distancePlayer.magnitude)
         {
             Enemy2Chase();
+            enemy2Animation.SetBool("mOve", true);
         }
+        else
+        {
+            enemy2Animation.SetBool("mOve", false);
+        }
+        
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -65,4 +72,14 @@ public class Enemy2 : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.DrawLine(m_raycastPoint.position, m_raycastPoint.position + m_raycastPoint.forward * m_maxDistance);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("playerAtack"))
+        {
+            Debug.Log("ssssssss");
+        }
+       
+    }
+   
 }
