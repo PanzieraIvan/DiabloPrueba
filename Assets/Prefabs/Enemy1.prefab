@@ -3585,7 +3585,6 @@ MonoBehaviour:
   shootobject: {fileID: 614622696}
   rotationSpeedEnemy1: 20
   distanceEnemy1: 18
-  damageEnemy1: 15
   iceBall: {fileID: -6766705596924297843, guid: 76ae0efdce679914081cceb21f2d1b1d,
     type: 3}
   timeToShoot: 1

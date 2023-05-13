@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class BruteStroke : MonoBehaviour
 {
-    [SerializeField] Enemy1 m_enemy1;
-    [SerializeField] Enemy2 m_enemy2;
-
     [SerializeField] private float m_playerHealth = 100f;
 
 
-    public void TakeDamageEnemy1()
+    public void TakeDamageEnemy1(float p_damage = 15f)
     {
-        m_playerHealth -= m_enemy1.damageEnemy1;
+        m_playerHealth -= p_damage;
 
         if (m_playerHealth < 0)
         {
@@ -36,9 +33,9 @@ public class BruteStroke : MonoBehaviour
             TakeDamageEnemy2();
         }
     }
-    public void TakeDamageEnemy2()
+    public void TakeDamageEnemy2(float p_damage = 5f)
     {
-        m_playerHealth -= m_enemy2.damageEnemy2;
+        m_playerHealth -= p_damage;
 
         if (m_playerHealth < 0)
         {

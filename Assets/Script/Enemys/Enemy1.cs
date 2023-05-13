@@ -9,8 +9,6 @@ public class Enemy1 : MonoBehaviour
     [SerializeField] float rotationSpeedEnemy1 = 20f;
     [SerializeField] float distanceEnemy1 = 18f;
 
-    [SerializeField] public float damageEnemy1 = 15f;
-
 
     [SerializeField] private IceBall iceBall;
     [SerializeField] private float timeToShoot = 1f;
