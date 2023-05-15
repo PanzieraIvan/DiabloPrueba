@@ -103,10 +103,16 @@ GameObject:
   m_Component:
   - component: {fileID: 6902825750234775352}
   - component: {fileID: 4759752923759655925}
+<<<<<<< Updated upstream
   - component: {fileID: 706658846}
   m_Layer: 7
   m_Name: EnemySpawner
   m_TagString: Enemy
+=======
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+>>>>>>> Stashed changes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,18 +150,28 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   m_spawnPositionsEnemy1:
+<<<<<<< Updated upstream
   - {fileID: 1100590345680585441}
   - {fileID: 342571367544321509}
   - {fileID: 6106546038424562763}
   - {fileID: 9123344839659611052}
   - {fileID: 2455655246963908757}
   - {fileID: 8302230019408346676}
+=======
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+>>>>>>> Stashed changes
   m_enemy2: {fileID: 0}
   m_enemy2List:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   m_spawnPositionsEnemy2:
+<<<<<<< Updated upstream
   - {fileID: 8924852498375316922}
   - {fileID: 9214805129845598332}
   - {fileID: 4623859951218897123}
@@ -175,6 +191,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_enemiesHealth: 100
+=======
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+>>>>>>> Stashed changes
 --- !u!1 &1559237013042512290
 GameObject:
   m_ObjectHideFlags: 0
