@@ -65,4 +65,17 @@ public class Enemy2 : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.DrawLine(m_raycastPoint.position, m_raycastPoint.position + m_raycastPoint.forward * m_maxDistance);
     }
+<<<<<<< Updated upstream
+=======
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("playerAtack"))
+        {
+            Debug.Log("ssssssss");
+        }
+       
+    }
+   
+>>>>>>> Stashed changes
 }
