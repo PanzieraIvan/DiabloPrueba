@@ -3565,10 +3565,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.16851847
-  m_Height: 1.9198292
+  m_Radius: 0.30551544
+  m_Height: 1.7623221
   m_Direction: 1
-  m_Center: {x: 0.02847827, y: 0.9804574, z: 0.10655067}
+  m_Center: {x: -0.0009305954, y: 0.90170395, z: 0.056567814}
 --- !u!114 &8166317539135730567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3587,7 +3587,7 @@ MonoBehaviour:
   distanceEnemy1: 18
   iceBall: {fileID: -6766705596924297843, guid: 76ae0efdce679914081cceb21f2d1b1d,
     type: 3}
-  timeToShoot: 1
+  timeToShoot: 2
   vampireAnimation: {fileID: 2323297898476489734}
   m_enemiesHealth: 100
 --- !u!114 &1182012176553399063

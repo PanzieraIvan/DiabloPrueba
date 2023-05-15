@@ -70,7 +70,7 @@ public class BruteStroke : MonoBehaviour
             m_playerHealth -= p_damage;
             StartCoroutine(Invulnerability());
             StartCoroutine(BrakeSpeed());
-            if (m_playerHealth == 0)
+            if (m_playerHealth == 5)
             {
                 GameOver();
             }
@@ -79,7 +79,7 @@ public class BruteStroke : MonoBehaviour
     }
     private void Update()
     {
-        if (m_playerHealth == 0)
+        if (m_playerHealth == 5)
         {
             GameOver();
         }
