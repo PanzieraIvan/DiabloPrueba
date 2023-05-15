@@ -4,16 +4,47 @@ using UnityEngine;
 
 public class BruteStroke : MonoBehaviour
 {
-    [SerializeField] private float m_playerHealth = 100f;
+    public float m_playerHealth = 100f;
+    public bool m_invincible = false;
+    public float m_currentInvincible = 1f;
+    public float m_currentBrakeSpeed = 1f;
 
+
+    IEnumerator Invulnerability()
+    {
+        m_invincible = true;
+        yield return new WaitForSeconds(m_currentInvincible);
+        m_invincible = false;
+    }
+
+    IEnumerator BrakeSpeed()
+    {
+        var currentSpeed = GetComponent<BruteMovement>().speedBrute;
+        GetComponent<BruteMovement>().speedBrute = 3f;
+        yield return new WaitForSeconds(m_currentBrakeSpeed);
+        GetComponent<BruteMovement>().speedBrute = currentSpeed;
+
+    }
+
+    public void GameOver()
+    {
+        Debug.Log("Game Over !!");
+        Time.timeScale = 0;
+    }
 
     public void TakeDamageEnemy1(float p_damage = 15f)
     {
-        m_playerHealth -= p_damage;
+       
 
-        if (m_playerHealth < 0)
+        if (!m_invincible && m_playerHealth > 0)
         {
-            m_playerHealth = 0;
+            m_playerHealth -= p_damage;
+            StartCoroutine(Invulnerability());
+            StartCoroutine(BrakeSpeed());
+            if (m_playerHealth == 0)
+            {
+                GameOver();
+            }
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -35,21 +66,15 @@ public class BruteStroke : MonoBehaviour
     }
     public void TakeDamageEnemy2(float p_damage = 5f)
     {
-        m_playerHealth -= p_damage;
-
-        if (m_playerHealth < 0)
+        if (!m_invincible && m_playerHealth > 0)
         {
-            m_playerHealth = 0;
+            m_playerHealth -= p_damage;
+            StartCoroutine(Invulnerability());
+            StartCoroutine(BrakeSpeed());
         }
 
     }
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-
-        }
-    }
+    
 }
 
  
