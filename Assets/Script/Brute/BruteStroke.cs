@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class BruteStroke : MonoBehaviour
 {
-    public float m_playerHealth = 100f;
+    public int m_playerHealth = 100;
+    
     public bool m_invincible = false;
     public float m_currentInvincible = 1f;
     public float m_currentBrakeSpeed = 1f;
@@ -32,10 +33,8 @@ public class BruteStroke : MonoBehaviour
         Time.timeScale = 0;
     }
 
-    public void TakeDamageEnemy1(float p_damage = 15f)
+    public void TakeDamageEnemy1(int p_damage = 15)
     {
-       
-
         if (!m_invincible && m_playerHealth > 0)
         {
             m_playerHealth -= p_damage;
@@ -64,17 +63,28 @@ public class BruteStroke : MonoBehaviour
             TakeDamageEnemy2();
         }
     }
-    public void TakeDamageEnemy2(float p_damage = 5f)
+    public void TakeDamageEnemy2(int p_damage = 5)
     {
         if (!m_invincible && m_playerHealth > 0)
         {
             m_playerHealth -= p_damage;
             StartCoroutine(Invulnerability());
             StartCoroutine(BrakeSpeed());
+            if (m_playerHealth == 0)
+            {
+                GameOver();
+            }
         }
 
     }
-    
+    private void Update()
+    {
+        if (m_playerHealth == 0)
+        {
+            GameOver();
+        }
+    }
+
 }
 
  

@@ -16,14 +16,33 @@ public class Enemy1 : MonoBehaviour
 
     public Animator vampireAnimation;
 
+    public int m_enemiesHealth = 100;
 
+    public void TakeDamagePlayer(int p_damage = 50)
+    {
+        if (m_enemiesHealth > 0)
+        {
+            m_enemiesHealth -= p_damage;
+            if (m_enemiesHealth == 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            TakeDamagePlayer();
+        }
+    }
     private void ShootEnemy1()
     {
         Instantiate(iceBall, shootobject.position, transform.rotation);
         curretTimeToShoot = timeToShoot;
     }
-        // Update is called once per frame
+       
         void Update()
     {
         var distancePlayer = vectorPlayer.position - transform.position;

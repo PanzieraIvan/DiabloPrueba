@@ -1957,7 +1957,7 @@ Animator:
   m_GameObject: {fileID: 6922545734222485065}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 2508ea8bc56d8e74b8980fc6600c6b12, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2645792f383fef84baae3a08827a4b53, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -1983,7 +1983,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 116
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!136 &7840973086280688956
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1992,12 +1992,12 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6922545734222485065}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.38552538
-  m_Height: 1.7750175
+  m_Radius: 0.19562355
+  m_Height: 1.9072949
   m_Direction: 1
-  m_Center: {x: -0.0014448166, y: 0.85231245, z: 0.2101841}
+  m_Center: {x: -0.0014448166, y: 0.9587061, z: 0.020282222}
 --- !u!114 &7840973086280688929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2017,10 +2017,11 @@ MonoBehaviour:
   distanceEnemy2: 1
   enemy2Animation: {fileID: 4447919066198808201}
   m_raycastPoint: {fileID: 628931752}
-  m_maxDistance: 50
+  m_maxDistance: 30.7
   m_raycastLayers:
     serializedVersion: 2
     m_Bits: 576
+  m_enemiesHealth: 100
 --- !u!114 &1707321873
 MonoBehaviour:
   m_ObjectHideFlags: 0

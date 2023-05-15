@@ -3589,6 +3589,7 @@ MonoBehaviour:
     type: 3}
   timeToShoot: 1
   vampireAnimation: {fileID: 2323297898476489734}
+  m_enemiesHealth: 100
 --- !u!114 &1182012176553399063
 MonoBehaviour:
   m_ObjectHideFlags: 0
