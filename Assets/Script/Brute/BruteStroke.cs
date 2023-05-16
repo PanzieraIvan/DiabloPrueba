@@ -61,6 +61,7 @@ public class BruteStroke : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             TakeDamageEnemy2();
+            
         }
     }
     public void TakeDamageEnemy2(int p_damage = 5)
