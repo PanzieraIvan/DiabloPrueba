@@ -24,20 +24,20 @@ public class Enemy2 : MonoBehaviour
         if (m_enemiesHealth > 0)
         {
             m_enemiesHealth -= p_damage;
-            if (m_enemiesHealth == 0)
+            if (m_enemiesHealth <= 0)
             {
                 Destroy(gameObject);
             }
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            TakeDamagePlayer();
-        }
-    }
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Player"))
+    //    {
+    //        TakeDamagePlayer();
+    //    }
+    //}
     private void move(Vector3 direction)
     {
         transform.position += direction * (speedEnemy2 * Time.deltaTime);

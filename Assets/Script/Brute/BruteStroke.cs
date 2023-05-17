@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class BruteStroke : MonoBehaviour
 {
     public int m_playerHealth = 100;
+    public Slider m_playerSlider;
     
     public bool m_invincible = false;
     public float m_currentInvincible = 1f;
@@ -40,7 +43,7 @@ public class BruteStroke : MonoBehaviour
             m_playerHealth -= p_damage;
             StartCoroutine(Invulnerability());
             StartCoroutine(BrakeSpeed());
-            if (m_playerHealth == 0)
+            if (m_playerHealth <= 0)
             {
                 GameOver();
             }
@@ -71,7 +74,7 @@ public class BruteStroke : MonoBehaviour
             m_playerHealth -= p_damage;
             StartCoroutine(Invulnerability());
             StartCoroutine(BrakeSpeed());
-            if (m_playerHealth == 5)
+            if (m_playerHealth <= 0)
             {
                 GameOver();
             }
@@ -80,11 +83,15 @@ public class BruteStroke : MonoBehaviour
     }
     private void Update()
     {
-        if (m_playerHealth == 5)
+        if (m_playerHealth <= 0)
         {
             GameOver();
         }
+        m_playerSlider.value = m_playerHealth;
     }
+
+
+
 
 }
 

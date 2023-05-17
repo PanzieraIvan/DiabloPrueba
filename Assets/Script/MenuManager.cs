@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
     [SerializeField] private Button m_playGame;
-   public void PlayGame()
+    [SerializeField] private LevelSceneManager m_loadSceneManager;
+    public void PlayGame(string p_levelToLoadTutorial)
     {
+        m_loadSceneManager.LoadLevelTutorial(p_levelToLoadTutorial);
         Debug.Log("Play Game");
     }
     public void ExitGame()

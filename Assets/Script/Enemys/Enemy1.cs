@@ -25,7 +25,7 @@ public class Enemy1 : MonoBehaviour
         if (m_enemiesHealth > 0)
         {
             m_enemiesHealth -= p_damage;
-            if (m_enemiesHealth == 0)
+            if (m_enemiesHealth <= 0)
             {
                 Destroy(gameObject);
             }
