@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy2 : MonoBehaviour
 {
@@ -17,25 +18,26 @@ public class Enemy2 : MonoBehaviour
     [SerializeField] private LayerMask m_raycastLayers;
 
     public int m_enemiesHealth = 100;
-    public void TakeDamagePlayer(int p_damage = 50)
+    public Slider m_sliderEnemy2;
+    public void TakeDamagePlayer(int p_damage = 30)
     {
         if (m_enemiesHealth > 0)
         {
             m_enemiesHealth -= p_damage;
-            if (m_enemiesHealth == 0)
+            if (m_enemiesHealth <= 0)
             {
                 Destroy(gameObject);
             }
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            TakeDamagePlayer();
-        }
-    }
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Player"))
+    //    {
+    //        TakeDamagePlayer();
+    //    }
+    //}
     private void move(Vector3 direction)
     {
         transform.position += direction * (speedEnemy2 * Time.deltaTime);
@@ -73,7 +75,8 @@ public class Enemy2 : MonoBehaviour
             DoRayCast();
         }
 
-        
+        m_sliderEnemy2.value = m_enemiesHealth;
+
     }
     private void DoRayCast()
     {

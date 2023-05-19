@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance;
 
+
     private void Awake()
     {
         if (Instance != null)
@@ -22,6 +23,7 @@ public class GameManager : MonoBehaviour
             //Guardar para siguiente Scene
             DontDestroyOnLoad(gameObject);
         }
+
     }
     public void AddExperience(int p_experience)
     {
