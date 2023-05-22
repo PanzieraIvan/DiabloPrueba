@@ -6,13 +6,16 @@ using UnityEngine.UI;
 
 public class BruteStroke : MonoBehaviour
 {
-    public int m_playerHealth = 100;
+    public float m_playerHealth = 1f;
     public Slider m_playerSlider;
     
     public bool m_invincible = false;
     public float m_currentInvincible = 1f;
     public float m_currentBrakeSpeed = 1f;
-
+    public Enemy1 m_enemy1;
+    public Slider m_sliderEnemy1;
+    public Enemy2 m_enemy2;
+    public Slider m_sliderEnemy2;
 
     IEnumerator Invulnerability()
     {
@@ -36,10 +39,11 @@ public class BruteStroke : MonoBehaviour
         Time.timeScale = 0;
     }
 
-    public void TakeDamageEnemy1(int p_damage = 15)
+    public void TakeDamageEnemy1(float p_damage = 0.15f)
     {
         if (!m_invincible && m_playerHealth > 0)
         {
+            m_sliderEnemy1.value = m_enemy1.m_enemiesHealth;
             m_playerHealth -= p_damage;
             StartCoroutine(Invulnerability());
             StartCoroutine(BrakeSpeed());
@@ -63,14 +67,16 @@ public class BruteStroke : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            Debug.Log("PPPPP");
             TakeDamageEnemy2();
             
         }
     }
-    public void TakeDamageEnemy2(int p_damage = 5)
+    public void TakeDamageEnemy2(float p_damage = 0.3f)
     {
         if (!m_invincible && m_playerHealth > 0)
         {
+            m_sliderEnemy2.value = m_enemy2.m_enemiesHealth;
             m_playerHealth -= p_damage;
             StartCoroutine(Invulnerability());
             StartCoroutine(BrakeSpeed());
