@@ -18,8 +18,9 @@ public class Enemy2 : MonoBehaviour
     [SerializeField] private LayerMask m_raycastLayers;
 
     public float m_enemiesHealth = 1f;
-   
-    public void TakeDamagePlayer(float p_damage = 0.3f)
+    public Slider m_sliderEnemy2;
+
+    public void TakeDamagePlayer(float p_damage = 1 * 0.5f)
     {
         if (m_enemiesHealth > 0)
         {
@@ -75,7 +76,8 @@ public class Enemy2 : MonoBehaviour
             DoRayCast();
         }
 
-        
+        m_sliderEnemy2.value = m_enemiesHealth;
+
 
     }
     private void DoRayCast()

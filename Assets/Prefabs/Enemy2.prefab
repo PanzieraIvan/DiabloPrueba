@@ -2652,7 +2652,8 @@ MonoBehaviour:
   m_raycastLayers:
     serializedVersion: 2
     m_Bits: 576
-  m_enemiesHealth: 100
+  m_enemiesHealth: 1
+  m_sliderEnemy2: {fileID: 1246163563}
 --- !u!114 &1707321873
 MonoBehaviour:
   m_ObjectHideFlags: 0

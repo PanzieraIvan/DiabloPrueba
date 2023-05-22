@@ -4054,7 +4054,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 112
   m_CollisionDetection: 2
 --- !u!136 &7524318646492111890
 CapsuleCollider:
@@ -4132,15 +4132,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0fa3673ad3aa8640be0e99ec7118428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_playerHealth: 100
+  m_playerHealth: 1
   m_playerSlider: {fileID: 2094365857}
   m_invincible: 0
   m_currentInvincible: 1
   m_currentBrakeSpeed: 1
-  m_enemy1: {fileID: 0}
-  m_sliderEnemy1: {fileID: 0}
-  m_enemy2: {fileID: 0}
-  m_sliderEnemy2: {fileID: 0}
 --- !u!1 &7351511800357556784
 GameObject:
   m_ObjectHideFlags: 0

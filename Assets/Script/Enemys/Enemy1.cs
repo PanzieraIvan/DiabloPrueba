@@ -18,9 +18,10 @@ public class Enemy1 : MonoBehaviour
     public Animator vampireAnimation;
 
     public float m_enemiesHealth = 1f;
-    
+    public Slider m_sliderEnemy1;
 
-    public void TakeDamagePlayer(float p_damage = 0.3f)
+
+    public void TakeDamagePlayer(float p_damage = 1 * 0.5f)
     {
         if (m_enemiesHealth > 0)
         {
@@ -56,6 +57,6 @@ public class Enemy1 : MonoBehaviour
   
         }
 
-        
+        m_sliderEnemy1.value = m_enemiesHealth;
     }
 }
