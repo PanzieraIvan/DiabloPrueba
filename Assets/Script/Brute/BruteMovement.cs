@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class BruteMovement : MonoBehaviour
+public class BruteMovement : PlayableCharacter
 {
     public float speedBrute = 10f;
     [SerializeField] private float rotationSpeedBrute = 30f;
