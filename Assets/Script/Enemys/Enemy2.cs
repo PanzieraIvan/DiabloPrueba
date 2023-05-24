@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Enemy2 : MonoBehaviour
 {
     [SerializeField] private Transform vectorPlayer;
-    [SerializeField] float rotationSpeedEnemy2 = 20f;
+   // [SerializeField] float rotationSpeedEnemy2 = 20f;
     [SerializeField] float speedEnemy2 = 3f;
     [SerializeField] float distanceEnemyPlayer = 18f;
     [SerializeField] float distanceEnemy2 = 0f;

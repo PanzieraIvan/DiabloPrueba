@@ -4013,8 +4013,7 @@ GameObject:
   - component: {fileID: 7524318646492111890}
   - component: {fileID: 7524318646492111888}
   - component: {fileID: 7524318646492111892}
-  - component: {fileID: 7524318646492111891}
-  - component: {fileID: 7524318646492111889}
+  - component: {fileID: 543450652605995416}
   m_Layer: 6
   m_Name: BrutePlayer
   m_TagString: Player
@@ -4105,7 +4104,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7524318646492111891
+--- !u!114 &543450652605995416
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4114,26 +4113,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 7253845582762116628}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06dcf0e74ab1bd5428ed6108edcbd69a, type: 3}
+  m_Script: {fileID: 11500000, guid: 9d95f06b8c829414aa53992d8e704f09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedBrute: 7
-  rotationSpeedBrute: 15
-  m_bruteAnimation: {fileID: 7524318646492111892}
---- !u!114 &7524318646492111889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7253845582762116628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0fa3673ad3aa8640be0e99ec7118428, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_playerHealth: 1
-  m_playerSlider: {fileID: 2094365857}
+  m_name: 
+  m_id: 
+  m_maxHealth: 1
+  m_slider: {fileID: 2094365857}
+  m_speed: 7
+  m_rotation: 15
+  m_animation: {fileID: 7524318646492111892}
+  currentHealth: 0
   m_invincible: 0
   m_currentInvincible: 1
   m_currentBrakeSpeed: 1

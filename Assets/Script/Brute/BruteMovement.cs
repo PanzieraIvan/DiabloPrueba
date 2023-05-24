@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BruteMovement : PlayableCharacter
+public class BruteMovement : MonoBehaviour
 {
     public float speedBrute = 10f;
     [SerializeField] private float rotationSpeedBrute = 30f;
@@ -25,8 +25,8 @@ public class BruteMovement : PlayableCharacter
             transform.position += l_moventDir * speedBrute * Time.deltaTime;
             if (l_moventDir != Vector3.zero) transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(l_moventDir), rotationSpeedBrute * Time.deltaTime);
 
-            m_bruteAnimation.SetFloat("SpeedBrute", moveHorizontal/*l_moventDir.magnitude * speedBrute*/);
-            m_bruteAnimation.SetFloat("SpeedBrute1", moveVertical/*l_moventDir.magnitude * speedBrute*/);        
+             m_bruteAnimation.SetFloat("SpeedBrute", moveHorizontal/*l_moventDir.magnitude * speedBrute*/);
+             m_bruteAnimation.SetFloat("SpeedBrute1", moveVertical/*l_moventDir.magnitude * speedBrute*/);        
     }  
     IEnumerator Attak()
     {

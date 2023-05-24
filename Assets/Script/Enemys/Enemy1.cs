@@ -7,7 +7,7 @@ public class Enemy1 : MonoBehaviour
 {
     [SerializeField] Transform vectorPlayer;
     [SerializeField] Transform shootobject;
-    [SerializeField] float rotationSpeedEnemy1 = 20f;
+    //[SerializeField] float rotationSpeedEnemy1 = 20f;
     [SerializeField] float distanceEnemy1 = 18f;
 
 
