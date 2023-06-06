@@ -2552,6 +2552,7 @@ GameObject:
   - component: {fileID: 7840973086280688956}
   - component: {fileID: 7840973086280688929}
   - component: {fileID: 1707321873}
+  - component: {fileID: 4189927659053877382}
   m_Layer: 7
   m_Name: Enemy2
   m_TagString: Enemy
@@ -2642,7 +2643,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vectorPlayer: {fileID: 0}
-  rotationSpeedEnemy2: 20
   speedEnemy2: 2
   distanceEnemyPlayer: 18
   distanceEnemy2: 1
@@ -2667,6 +2667,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+--- !u!136 &4189927659053877382
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6922545734222485065}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.17256375
+  m_Height: 0.8503632
+  m_Direction: 2
+  m_Center: {x: 0.1709795, y: 1.1233132, z: 1.1453484}
 --- !u!1 &7115359221181252205
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,30 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Enemy1 : MonoBehaviour
+public class Enemy1 : PlayableCharacter
 {
+    public float currentHealt;
     [SerializeField] Transform vectorPlayer;
     [SerializeField] Transform shootobject;
-    //[SerializeField] float rotationSpeedEnemy1 = 20f;
-    [SerializeField] float distanceEnemy1 = 18f;
-
+    
+    [SerializeField] float distanceEnemyPlayer = 18f;
+    
 
     [SerializeField] private IceBall iceBall;
     [SerializeField] private float timeToShoot = 1f;
     private float curretTimeToShoot;
 
-    public Animator vampireAnimation;
+    
 
-    public float m_enemiesHealth = 1f;
-    public Slider m_sliderEnemy1;
+    
 
+    
+    
 
+    private void Awake()
+    {
+        currentHealt = m_maxHealth;
+    }
     public void TakeDamagePlayer(float p_damage = 1 * 0.5f)
     {
-        if (m_enemiesHealth > 0)
+        if (currentHealt > 0)
         {
-            m_enemiesHealth -= p_damage;
-            if (m_enemiesHealth <= 0)
+            currentHealt -= p_damage;
+            if (currentHealt <= 0)
             {
                 Destroy(gameObject);
             }
@@ -44,19 +50,33 @@ public class Enemy1 : MonoBehaviour
     {
         Instantiate(iceBall, shootobject.position, transform.rotation);
         curretTimeToShoot = timeToShoot;
+
+        
     }
+    private void Rotation()
+    {
+        Vector3 targetOrientation = vectorPlayer.position - transform.position;
+        Debug.DrawRay(transform.position, targetOrientation, Color.red);
+
+        Quaternion targetOrientationQuaternion = Quaternion.LookRotation(targetOrientation);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetOrientationQuaternion, Time.deltaTime);
+    }
+
+   
        
         void Update()
     {
         var distancePlayer = vectorPlayer.position - transform.position;
         curretTimeToShoot -= Time.deltaTime;
 
-        if (distanceEnemy1 > distancePlayer.magnitude && (curretTimeToShoot <= 0))
+        if (distanceEnemyPlayer > distancePlayer.magnitude && (curretTimeToShoot <= 0))
         {
             ShootEnemy1();
-  
-        }
+            
 
-        m_sliderEnemy1.value = m_enemiesHealth;
+
+        }
+        Rotation();
+        m_slider.value = currentHealt;
     }
 }

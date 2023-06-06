@@ -43,7 +43,7 @@ public class Enemy2 : MonoBehaviour
     {
         transform.position += direction * (speedEnemy2 * Time.deltaTime);
     }
-    private void Enemy2Chase()
+    public void Enemy2Chase()
     {
        
         var diferenceVector = vectorPlayer.position - transform.position;
@@ -102,7 +102,7 @@ public class Enemy2 : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("ssssssss");
+            
             TakeDamagePlayer();
         }
        
