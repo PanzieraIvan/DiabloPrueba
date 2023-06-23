@@ -9,6 +9,7 @@ TagManager:
   - Wall
   - playerAtack
   - Axe
+  - Options
   layers:
   - Default
   - TransparentFX
