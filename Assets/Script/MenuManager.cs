@@ -8,11 +8,19 @@ public class MenuManager : MonoBehaviour
 {
     [SerializeField] private Button m_playGame;
     [SerializeField] private LevelSceneManager m_loadSceneManager;
-    public void PlayGame(string p_levelToLoadTutorial)
+
+    public int namberScene;
+    //public void PlayGame(string p_levelToLoadTutorial)
+    //{
+    //    m_loadSceneManager.LoadLevelTutorial(p_levelToLoadTutorial);
+    //    Debug.Log("Play Game");
+    //}
+
+    public void PlayGame()
     {
-        m_loadSceneManager.LoadLevelTutorial(p_levelToLoadTutorial);
-        Debug.Log("Play Game");
+        SceneManager.LoadScene(namberScene);
     }
+    
     public void ExitGame()
     {
         Debug.Log("Exit Game");

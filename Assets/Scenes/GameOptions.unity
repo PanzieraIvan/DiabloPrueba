@@ -1125,9 +1125,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: e77adfb1b47133145a564a982b8a9775, type: 3}
+      - m_Target: {fileID: 1913741373}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: PlayGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4577,6 +4577,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_playGame: {fileID: 366097267}
   m_loadSceneManager: {fileID: 0}
+  namberScene: 1
 --- !u!4 &1913741374
 Transform:
   m_ObjectHideFlags: 0

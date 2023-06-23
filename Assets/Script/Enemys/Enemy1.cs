@@ -21,6 +21,8 @@ public class Enemy1 : PlayableCharacter
     
 
     
+
+    
     
 
     private void Awake()
@@ -61,7 +63,10 @@ public class Enemy1 : PlayableCharacter
         Quaternion targetOrientationQuaternion = Quaternion.LookRotation(targetOrientation);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetOrientationQuaternion, Time.deltaTime);
     }
-
+    private void Slider()
+    {
+        m_slider.value = currentHealt;
+    }
    
        
         void Update()
@@ -77,6 +82,7 @@ public class Enemy1 : PlayableCharacter
 
         }
         Rotation();
-        m_slider.value = currentHealt;
+        Slider();
+        
     }
 }
