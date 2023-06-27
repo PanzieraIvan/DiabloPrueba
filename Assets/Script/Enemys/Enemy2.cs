@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy2 : MonoBehaviour
 {
     [SerializeField] private Transform vectorPlayer;
-    [SerializeField] float rotationSpeedEnemy2 = 20f;
+    // [SerializeField] float rotationSpeedEnemy2 = 20f;
     [SerializeField] float speedEnemy2 = 3f;
     [SerializeField] float distanceEnemyPlayer = 18f;
     [SerializeField] float distanceEnemy2 = 1f;
@@ -16,11 +16,40 @@ public class Enemy2 : MonoBehaviour
     [SerializeField] private float m_maxDistance;
     [SerializeField] private LayerMask m_raycastLayers;
 
+<<<<<<< Updated upstream
+=======
+    public float m_enemiesHealth = 1f;
+    public Slider m_sliderEnemy2;
+    public AudioSource grito;
+
+    public BruteCharacter player;
+
+    public void TakeDamagePlayer(float p_damage = 1 * 0.5f)
+    {
+        if (m_enemiesHealth > 0)
+        {
+            m_enemiesHealth -= p_damage;
+            if (m_enemiesHealth <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
+
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Player"))
+    //    {
+    //        TakeDamagePlayer();
+    //    }
+    //}
+>>>>>>> Stashed changes
     private void move(Vector3 direction)
     {
         transform.position += direction * (speedEnemy2 * Time.deltaTime);
+        //grito.Play();
     }
-    private void Enemy2Chase()
+    public void Enemy2Chase()
     {
        
         var diferenceVector = vectorPlayer.position - transform.position;
@@ -29,6 +58,10 @@ public class Enemy2 : MonoBehaviour
         {
             transform.LookAt(vectorPlayer);
             move(diferenceVector.normalized);
+<<<<<<< Updated upstream
+=======
+            grito.Play();
+>>>>>>> Stashed changes
         }
     }
     // Update is called once per frame
@@ -46,7 +79,13 @@ public class Enemy2 : MonoBehaviour
             DoRayCast();
         }
 
+<<<<<<< Updated upstream
         
+=======
+        m_sliderEnemy2.value = m_enemiesHealth;
+
+
+>>>>>>> Stashed changes
     }
     private void DoRayCast()
     {
@@ -72,7 +111,11 @@ public class Enemy2 : MonoBehaviour
     {
         if (other.gameObject.CompareTag("playerAtack"))
         {
+<<<<<<< Updated upstream
             Debug.Log("ssssssss");
+=======
+            TakeDamagePlayer();
+>>>>>>> Stashed changes
         }
        
     }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BruteMovement : MonoBehaviour
 {
@@ -10,6 +11,22 @@ public class BruteMovement : MonoBehaviour
     private bool m_atackPlayer;
 
     public void MovePlayer()
+<<<<<<< Updated upstream
+=======
+    {     
+            float moveHorizontal = Input.GetAxis("Horizontal");
+            float moveVertical = Input.GetAxis("Vertical");
+            var l_moventDir = new Vector3(moveHorizontal, 0, moveVertical);
+            l_moventDir.Normalize();
+
+            transform.position += l_moventDir * speedBrute * Time.deltaTime;
+            if (l_moventDir != Vector3.zero) transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(l_moventDir), rotationSpeedBrute * Time.deltaTime);
+
+             m_bruteAnimation.SetFloat("SpeedBrute", moveHorizontal/*l_moventDir.magnitude * speedBrute*/);
+             m_bruteAnimation.SetFloat("SpeedBrute1", moveVertical/*l_moventDir.magnitude * speedBrute*/);        
+    }  
+    IEnumerator Attak()
+>>>>>>> Stashed changes
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");

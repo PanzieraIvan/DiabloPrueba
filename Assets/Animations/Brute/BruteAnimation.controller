@@ -274,11 +274,27 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_Name: GameOver
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -1716009608707389189}
+=======
+  m_Name: Base Layer
+  m_ChildStates:
+  - serializedVersion: 1
+    m_State: {fileID: -8376079877800959686}
+    m_Position: {x: -200, y: -220, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -3238619724614740691}
+    m_Position: {x: 280, y: 110, z: 0}
+  m_ChildStateMachines: []
+  m_AnyStateTransitions:
+  - {fileID: -7613009229881304333}
+  m_EntryTransitions: []
+  m_StateMachineTransitions: {}
+>>>>>>> Stashed changes
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0

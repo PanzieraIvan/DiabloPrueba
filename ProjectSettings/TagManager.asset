@@ -10,6 +10,12 @@ TagManager:
 <<<<<<< Updated upstream
 =======
   - playerAtack
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+  - Axe
+  - Options
+  - Enemy2
 >>>>>>> Stashed changes
   layers:
   - Default
@@ -22,8 +28,13 @@ TagManager:
   - Enemy
   - Floor
   - Wall
+<<<<<<< Updated upstream
   - 
   - 
+=======
+  - Axe
+  - Portal
+>>>>>>> Stashed changes
   - 
   - 
   - 
